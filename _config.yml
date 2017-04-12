@@ -94,7 +94,7 @@ github_username:  knalx
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-minimal
+theme: jekyll-theme-slate
 >>>>>>> 4c8c2b76e427bae8b5debe29f2ad49b0356aafbb
 gems:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
