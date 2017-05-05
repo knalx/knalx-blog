@@ -5,7 +5,7 @@ date:   2017-04-09 14:07:36 +0300
 categories: elasticsearch
 ---
 
-If you want to tun integration test with Elasticserach in Java application you need to do this.
+If you want to run integration test with Elasticserach in Java application you need to do this.
 
 
 Run it on transport port (9300) - its not so easy as you think
