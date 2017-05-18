@@ -14,11 +14,13 @@ https://dzone.com/articles/java-and-memory-limits-in-containers-lxc-docker-an
 https://habrahabr.ru/post/324918/
 4) про CompressedClassSpaceSize: http://stackoverflow.com/questions/31075761/java-8-reserves-minimum-1g-for-metaspace-despite-maxmetaspacesize
 5)
+ ```
 -XX:InitialCodeCacheSize=64M -XX:CodeCacheExpansionSize=1M -XX:CodeCacheMinimumFreeSpace=1M -XX:ReservedCodeCacheSize=200M
 -XX:MinMetaspaceExpansion=1M -XX:MaxMetaspaceExpansion=8M -XX:MaxMetaspaceSize=200M
 -XX:MaxDirectMemorySize=96M
 -XX:CompressedClassSpaceSize=256M
 -Xss1024K
+```
 This is an example from an app with -Xmx1445M -Xms1445M . The total consumption goes to about 2048M with these values in one case.
 https://plumbr.eu/blog/memory-leaks/why-does-my-java-process-consume-more-memory-than-xmx
 6) В контейнере от fabric8io никаких магических параметров не проставляется, только ставится Xmx = лимит на контейнер / 2, и число тредов под сборщик мусора равное числу выделенных процессоров (-XX:ParallelGCThreads=$
@@ -28,6 +30,7 @@ https://plumbr.eu/blog/memory-leaks/why-does-my-java-process-consume-more-memory
 )
 7) http://blog.sokolenko.me/2014/11/javavm-options-production.html
 8) описание опций java - https://docs.oracle.com/javase/8/docs/technotes/tools/windows/java.html
+9) https://blogs.oracle.com/java-platform-group/java-se-support-for-docker-cpu-and-memory-limits
 
 ### Инструменты для анализа:
 jps - инфо по процессам java
