@@ -59,6 +59,7 @@ jcmd PID VM.native_memory summary(нужно при запуске процес�
 4) добавить -XX:NativeMemoryTracking=summary для точной статистики изпользования памяти ( note that enabling this will cause you a 5-10% overhead) http://hirt.se/blog/?p=401, можно еще добавить -XX:+PrintNMTStatistics -XX:+UnlockDiagnosticVMOptions чтобы при смерте процес вывел информацию о памяти
 
 ---
+```
 Native Memory Tracking
 JVM option: -XX:NativeMemoryTracking=summary
 How to get from java process: jcmd PID VM.native_memory summary
@@ -73,4 +74,5 @@ Internal
 Symbol
 Native Memory Tracking
 Arena Chunk
+```
 ---
